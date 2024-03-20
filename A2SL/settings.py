@@ -28,7 +28,8 @@ SECRET_KEY = '3k7=!d39#4@&5a6to&4==j(c^v0(vv91cj5+9e8+d4&+01jb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+# If you want only for vercel:-ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
