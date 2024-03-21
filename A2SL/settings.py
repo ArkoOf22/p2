@@ -26,7 +26,8 @@ SECRET_KEY = '3k7=!d39#4@&5a6to&4==j(c^v0(vv91cj5+9e8+d4&+01jb'
 #.............................one line missing>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 # If you want only for vercel:-ALLOWED_HOSTS = ['.vercel.app']
@@ -123,7 +124,15 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = [    
-    os.path.join(BASE_DIR,"assets"),
-]
+# STATICFILES_DIRS = [    
+#     os.path.join(BASE_DIR,"assets"),
+# ]
+STATICFILES_DIRS=os.path.join(BASE_DIR,'assets'),
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles_build','assets')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+MEDIA_URL = '/media/'
+
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "assets")
 
